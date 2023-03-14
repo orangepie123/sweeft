@@ -1,0 +1,11 @@
+Int notContains(Int[] array);
+def notContains(array):
+    n = len(array)
+    present = [False] * (n+1)
+    for i in range(n):
+        if 1 <= array[i] <= n:
+            present[array[i]] = True
+    for i in range(1, n+1):
+        if not present[i]:
+            return i
+    return n+1
